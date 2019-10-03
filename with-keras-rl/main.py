@@ -18,9 +18,9 @@ nb_actions = env.action_space.n
 
 model = Sequential()
 model.add(Flatten(input_shape=(1,) + env.observation_space.shape))
-model.add(Dense(8))
+model.add(Dense(16))
 model.add(Activation('relu'))
-model.add(Dense(8))
+model.add(Dense(32))
 model.add(Activation('relu'))
 model.add(Dense(nb_actions))
 model.add(Activation('linear'))
